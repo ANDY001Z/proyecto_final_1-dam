@@ -1,0 +1,234 @@
+body {
+  font-family: "Chewy", system-ui;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #b388eb, #9055ff, #6f00ff);
+  padding: 10px 20px;
+  width: 100%;
+}
+
+header img {
+  display: inline;
+  height: 30px;
+  width: 65px;
+  margin: 5px 0 15px;
+  padding-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li:not(:last-child)::after {
+  content: "|";
+  color: white;
+  margin-left: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+}
+
+
+
+
+
+
+/* Cada sección centrada y con un ancho máximo para que no ocupe toda la pantalla */
+section {
+  width: 100%;
+   /* limita ancho del contenido */
+  /* centra horizontal y añade margen vertical */
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: "Chewy", system-ui;
+  color: #333;
+  border-radius: 15px;
+  text-align: center; /* centra texto y elementos inline */
+}
+/* Títulos morados */
+section h2 {
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 50px
+}
+
+/* Párrafos con un poco de separación */
+section p {
+    margin-bottom: 40px;
+    line-height: 1.5;
+    font-size: 25px;
+}
+
+/* Contenedor de imágenes en fila centrada con gap pequeño */
+.imagenes-representantes {
+    display: flex;
+    justify-content: center; /* centrar fila */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Imágenes más pequeñas, proporción y borde redondeado */
+.imagenes-representantes img {
+    width: 360px;
+    height: 485px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(111, 0, 255, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin: 20px;
+}
+
+.imagenes-representantes img:hover {
+    transform: scale(1.05);
+}
+
+/* Desplegables: simple y centrado */
+.desplegable {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #6f00ff;
+    border-radius: 6px;
+    margin: 15px auto;
+    padding: 10px 20px;
+    max-width: 300px;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    user-select: none;
+}
+
+/* Flecha al lado derecho */
+.desplegable::after {
+    content: '▶';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+/* Flecha gira cuando está activo */
+.desplegable.active::after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+/* Contenido desplegado centrado y con borde */
+.desplegado {
+    max-width: 500px;
+    margin: 10px auto 0 auto;
+    padding: 10px 20px;
+    background: #fff;
+    border-left: 4px solid #6f00ff;
+    border-radius: 0 6px 6px 0;
+    display: none;
+    text-align: left;
+}
+
+/* Mostrar contenido desplegado */
+.desplegado.show {
+    display: block;
+}
+
+.mascota {
+    padding: 20px;
+    border-radius: 20px;
+    margin: 40px auto;
+    width: 700px;
+    
+    box-shadow: 0 0 10px rgba(111, 0, 255, 0.4);
+
+
+
+}
+
+
+
+/* Imagen centrada con estilo */
+.mascota img {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(10, 1, 21, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.mascota img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Solo fondo diferente para cada sección */
+.introduccion {
+  background-color: rgba(179, 136, 235, 0.15); /* lila suave */
+}
+
+.como-surgio {
+  background-color: rgba(179, 136, 235, 0.05); /* lila muy suave */
+}
+
+.mision-vision-valores {
+  background-color: rgba(179, 136, 235, 0.15); /* lila un poco más intenso */
+}
+
+.mascota {
+  background: linear-gradient(
+  135deg,
+  rgba(179, 136, 235, 0.15) 0%,   /* lila suave, mismo que usas */
+  rgba(255, 182, 193, 0.1) 60%,   /* rosa pastel muy suave */
+  rgba(255, 255, 255, 0.05) 100%  /* blanco casi transparente */
+);
+  /* rosa suave */
+}
+
+.borde-animado {
+   
+  /* Espacio para que se vea el borde */
+  border-radius: 24px;
+  width: fit-content;
+  height:fit-content;
+  margin: 40px auto;
+  background: linear-gradient(270deg, #b388eb, #9055ff, #d8a6c3, #b388eb);
+  animation: moverBorde 8s ease infinite;
+}
+
+@keyframes moverBorde {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+

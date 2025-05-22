@@ -1,0 +1,279 @@
+body {
+  font-family: "Chewy", system-ui;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #b388eb, #9055ff, #6f00ff);
+  padding: 10px 20px;
+  width: 100%;
+}
+
+header img {
+  display: inline;
+  height: 30px;
+  width: 65px;
+  margin: 5px 0 15px;
+  padding-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li:not(:last-child)::after {
+  content: "|";
+  color: white;
+  margin-left: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #fff;
+}
+
+.seccion1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.seccion1 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.caja-frontal {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 40px;
+  border-radius: 20px;
+  display: grid;
+  gap: 20px;
+  text-align: center;
+  border: 5px solid #b388eb;
+}
+
+.bienvenida {
+  font-size: 100px;
+  margin: 0;
+}
+
+.subtexto {
+  font-size: 30px;
+  margin: 0;
+}
+
+.accesoPaginas {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Chewy", system-ui;
+  color: #333;
+}
+
+.bloque {
+  width: 100%;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  margin: 0;
+  color: #333;
+  font-family: "Chewy", system-ui;
+  border-bottom: 1px solid #c2a9ff;
+}
+
+#bloque1 {
+  background: rgba(179, 136, 235, 0.1);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#bloque2 {
+  background: rgba(179, 136, 235, 0.05);
+}
+
+#bloque3 {
+  background: rgba(179, 136, 235, 0.15);
+}
+
+.titulo-derecha {
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.titulo-izquierda {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.titulo-centro {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.derecha {
+  text-align: right;
+  background: #fff0f5;
+}
+
+.izquierda {
+  text-align: left;
+  background: #fffaf0;
+}
+
+.centro {
+  text-align: center;
+  background: #f0f8ff;
+}
+
+.titulo {
+  font-size: 3.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.contenido-bloque {
+  text-align: inherit;
+  font-size: 20px;
+  color: #333;
+}
+
+.contenido-bloque p {
+  margin-bottom: 15px;
+}
+
+.contenido-bloque a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.contenido-bloque .p1 {
+  margin-bottom: 40px;
+}
+
+.bloque button,
+.btn {
+  background: linear-gradient(45deg, hotpink, deeppink);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(255, 20, 147, 0.6);
+}
+
+.btn {
+  width: 200px;
+  height: 50px;
+  margin-left: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #b388eb, #ff69b4);
+  box-shadow: 0 4px 8px rgba(255, 105, 180, 0.4);
+}
+
+.btn:hover,
+.bloque button:hover {
+  background: linear-gradient(45deg, #ff69b4, #b388eb);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(180, 130, 235, 0.6);
+}
+
+#bloque1 .btn,
+#bloque2 .btn,
+#bloque3 .btn {
+  margin: 20px auto;
+}
+
+#micontador {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.num {
+  background-color: #ffe5f0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 60px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dig span {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+}
+
+.label {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #555;
+}
+
+.galeria-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.galeria-productos img {
+  width: 23%;
+  height: 400px;
+  margin-bottom: 10px;
+  border-radius: 40px;
+  transition: transform 0.3s ease;
+}
+
+.galeria-productos img:hover {
+  transform: scale(1.05);
+  padding-bottom: 30px;
+}
+
+.accesoCentro a {
+  color: #ff69b4;
+  text-decoration: underline;
+}
