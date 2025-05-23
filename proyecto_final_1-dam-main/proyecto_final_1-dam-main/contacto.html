@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="contacto.css" />
+  <title>Contacto</title>
+
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+</style>
+
+</head>
+<body>
+
+  <header>
+    <img src="img/sombra_gusano.png" alt="Logo Gusanito" />
+
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+        <li><a href="servicios.html">servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="contacto-container">
+    <h2>¡Contáctanos!</h2>
+    <p>¿Tienes dudas, sugerencias o simplemente quieres saludarnos? Rellena el siguiente formulario:</p>
+
+    <form class="formdeContacto">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+      <div id="container">
+        <img id="movingImage" src="img/gusigom.png" alt="Imagen">
+        <div id="bubble" class="bubble"></div>
+    </div>
+
+  <footer>
+        <br><br><br>
+        <h3>KANDY TRUCK</h3>
+        <p class="copyright"><b>KANDYTRUCK </b>Copyright © 2025</p>
+        <div class="contact">
+            <a href="contacto.html">Contáctanos</a>
+            <p>
+                <img src="icons8-linkedin-logo-48.png" alt="Facebook" height="20px">&nbsp;&nbsp;&nbsp;
+                &nbsp;<img src="icons8-instagram-logo-48.png" alt="YouTube " height="20px">&nbsp;&nbsp;&nbsp;
+                &nbsp;<img src="icons8-facebook-logo-48.png" alt="X " height="20px">&nbsp;&nbsp;&nbsp;
+                &nbsp;<img src="icons8-whatsapp-48.png" alt="Instagram" height="20px">
+            </p>
+            <br><hr><br><br>
+        </div>
+    </footer>
+
+  <script src="funciones.js"></script>
+</body>
+</html>

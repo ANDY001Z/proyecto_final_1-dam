@@ -1,0 +1,267 @@
+body {
+  font-family: "Chewy", system-ui;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #b388eb, #9055ff, #6f00ff);
+  padding: 10px 20px;
+}
+
+header img {
+  height: 30px;
+  width: 65px;
+  margin: 10px 0 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li:not(:last-child)::after {
+  content: "|";
+  color: white;
+  margin-left: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+nav a:hover {
+  text-shadow: 0 0 5px #fff;
+}
+
+section {
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #333;
+  border-radius: 15px;
+  font-family: "Chewy", system-ui;
+}
+
+section h2 {
+  color: black;
+  margin-bottom: 15px;
+  font-size: 50px;
+}
+
+section p {
+  margin-bottom: 40px;
+  line-height: 1.5;
+  font-size: 25px;
+}
+
+/* ----- IMÁGENES ----- */
+.imagenes-representantes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.imagenes-representantes img {
+  width: 360px;
+  height: 485px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(111, 0, 255, 0.3);
+  cursor: pointer;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.imagenes-representantes img:hover,
+.mascota img:hover {
+  transform: scale(1.05);
+}
+
+
+.desplegable {
+  cursor: pointer;
+  background: #f0f0f0;
+  color: #6f00ff;
+  border-radius: 6px;
+  margin: 15px auto;
+  padding: 10px 20px;
+  max-width: 300px;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  user-select: none;
+}
+
+.desplegable::after {
+  content: '▶';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.desplegable.active::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.desplegado {
+  display: none;
+  max-width: 500px;
+  margin: 10px auto 0;
+  padding: 10px 20px;
+  background: white;
+  border-left: 4px solid #6f00ff;
+  border-radius: 0 6px 6px 0;
+  text-align: left;
+}
+
+.desplegado.show {
+  display: block;
+}
+
+/* ----- MASCOTA ----- */
+.mascota {
+  width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(111, 0, 255, 0.4);
+  background: linear-gradient(135deg,
+    rgba(144, 144, 144, 0.15),
+    rgba(255, 182, 193, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
+}
+
+.mascota img {
+  display: block;
+  margin: 20px auto 0;
+  width: 150px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(10, 1, 21, 0.4);
+  transition: transform 0.3s ease;
+}
+
+
+.introduccion {
+  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.como-surgio {
+  background-color: rgba(179, 136, 235, 0.05);
+}
+
+.mision-vision-valores {
+  background-color: rgba(179, 136, 235, 0.15);
+}
+
+.borde-animado {
+  border-radius: 24px;
+  width: fit-content;
+  margin: 40px auto;
+  background: linear-gradient(270deg, #fbc2eb, #a6c1ee, #ffd6e0, #c2f0fc);
+}
+
+footer{
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    bottom: 0px;
+    text-align: center;
+}
+
+footer h3{
+    margin-top: 20px;
+    font-size: 40px;
+    color: white;
+    margin: auto;
+}
+
+.copyright{
+    margin-top: 40px;
+    font-size: smaller;
+    color: #4d4d4d;
+}
+
+.contact{
+    
+    float: center;
+    color: #000000;
+}
+
+.contact:hover{
+    color: #004db3;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+    position: fixed;
+    top: 0;
+    left: 350px;
+    width: 100vw;
+    height: 100vh; /* Esto evitará que bloquee clics si está encima de otros elementos */
+    z-index: 9999; /* Muy alto para que esté por encima de todo */
+    pointer-events: none;
+  }
+
+
+#movingImage {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    pointer-events: auto;
+}
+
+.bubble {
+    display: none;
+    position: absolute;
+    background-color: rgba(227, 100, 255, 0.7);
+    border-radius: 15px;
+    border-color: blueviolet;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    transform: translate(-30%, -30%);
+    animation: bubbleAnimation 4s forwards;
+}
+
+@keyframes bubbleAnimation {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translate(-50%, -60%) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -70%) scale(1.5);
+    }
+}
+
+
